@@ -1,0 +1,39 @@
+<router-outlet></router-outlet>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h3>Sign Up</h3>
+                </div>
+        
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                        <label for="signUpUsername" class="form-label">Username</label>
+                        <input type="text" formControlName="username" class="form-control" id="signUpUsername" placeholder="Enter Your Username">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="signUpPassword" class="form-label">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="signUpPassword" placeholder="Enter Your Password">
+                    </div>
+                    
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree with Privacy and Policy </label>
+                    </div>
+                
+                    <button type="submit" class="button btn btn-primary">Sign Up <i class="fas fa-greater-than"></i></button>
+                
+                    
+                    <div>
+                        <span class="text-center">
+                            <br><p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<app-vehicle-dashboard></app-vehicle-dashboard>
+<div class="container">
+    <router-outlet></router-outlet>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Model</th>
+                <th scope="col">Price</th>
+                <th scope="col">Function</th>
+                <th><button type="button" class="btn btn-outline-danger btn-rounded waves-effect "
+                        (click)="deleteAll()"><i class="fas fa-trash" aria-hidden="true"></i>Delete All</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of allRecord">
+                <td>{{record.id}}</td>
+                <td>{{record.type}}</td>
+                <td>{{record.model}}</td>
+                <td>{{record.price}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-success btn-rounded waves-effect"><i
+                            class="fas fa-heart" aria-hidden="true"></i>Favorite</button>
+
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="btn btn-outline-info btn-rounded waves-effect mx-2" (click)="edit(record)">
+                        <a [routerLink]="['/edit']">
+                            <i class="fas fa-pen" aria-hidden="true"></i>Edit
+                        </a>
+                    </button>
+
+                    <button type="button" class="btn btn-outline-danger btn-rounded waves-effect "
+                        (click)="deleteVehicle(record)"><i class="fas fa-trash" aria-hidden="true"></i>Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Movie Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Form -->
+                    <form [formGroup]="formValue">
+
+                        <div class="mb-3">
+                            <label for="mid" class="form-label">id</label>
+                            <input type="number" formControlName="id" class="form-control" id="id">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="type" class="form-label">type</label>
+                            <input type="text" formControlName="type" class="form-control" id="type">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="model" class="form-label">model</label>
+                            <input type="text" formControlName="model" class="form-control" id="model">
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">price</label>
+                            <input type="number" formControlName="price" class="form-control" id="price">
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" *ngIf="btnSaveshow" (click)="AddMovie()">Save</button>
+                    <button type="button" class="btn btn-primary" *ngIf="btnUpdateshow" (click)="update()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

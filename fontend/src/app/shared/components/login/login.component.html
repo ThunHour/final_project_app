@@ -1,0 +1,24 @@
+<router-outlet></router-outlet>
+
+<div class="card mb-3">
+    <h3 class="card-title text-center">Login</h3>
+    <img src="/assets/img/LOGIN.png" class="card-img-top" alt="...">
+    <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="login()"> 
+            <div class="mb-3">
+                <label for="loginUserName" class="form-label">Username</label>
+                <input type="username" formControlName="username" class="form-control" id="loginUserName" placeholder="Enter Your Username">
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="loginPassword" placeholder="Enter Your Password">
+            </div>
+            <div>
+                <span>
+                    <p>Don't have an account? <a [routerLink]="['/sign-up']">Sign Up</a></p>
+                </span>
+            </div>
+            <button type="submit" class="button btn btn-primary">Login <i class="fas fa-greater-than"></i></button>
+        </form>
+    </div>
+</div>

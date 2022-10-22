@@ -1,0 +1,89 @@
+{
+  "vehicleForm": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "username": "Vann",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "username": "Vann123",
+      "password": "qwertyu",
+      "id": 3
+    },
+    {
+      "username": "Vann168",
+      "password": "Vann168",
+      "id": 4
+    },
+    {
+      "username": "123",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "username": "12312",
+      "password": "145",
+      "id": 6
+    },
+    {
+      "username": "A123",
+      "password": "A123",
+      "id": 7
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "username": "12357",
+      "password": "qwrt",
+      "id": 9
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 12
+    },
+    {
+      "username": "qwe",
+      "password": "qwe",
+      "id": 13
+    },
+    {
+      "username": "book",
+      "password": "book",
+      "id": 14
+    },
+    {
+      "username": "lol",
+      "password": "lol",
+      "id": 15
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

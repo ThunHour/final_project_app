@@ -1,0 +1,18 @@
+.card{
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #9DBCB1;
+    transform: translate(-50%, -50%);
+}
+.form-control{
+    background-color: #D3F4E9;
+    border-radius: 20px;
+}
+
+.button{
+   border-radius: 20px;
+}
